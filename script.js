@@ -1,6 +1,6 @@
-// ==========================================================
-// MYSTICOS DELICTIVO • SCRIPTS INTERACTIVOS (GitHub Pages)
-// ==========================================================
+// CODIGO ABIERTO BY YUNG SAMY - DISCORD: likeadversario
+// GITHUB: https://github.com/yungsamy4p/manual-delictual
+// INSTAGRAM: https://www.instagram.com/yungsamy4p
 
 document.addEventListener('DOMContentLoaded', () => {
 
