@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MANUAL OPERATIVO • MYSTICOS DELICTIVO</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=JetBrains+Mono:wght@400;600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BACKGROUND GRID EFFECT -->
+  <div class="cyber-grid"></div>
+  <div class="glow-radial glow-top"></div>
+  <div class="glow-radial glow-bottom"></div>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-skull-crossbones"></i>
+        </div>
+        <div class="brand-text">
+          <h1>MYSTICOS <span>DELICTIVO</span></h1>
+          <p>SISTEMA DE GESTIÓN CRIMINAL • FIVEFACTIONS</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="badge-status online">
+          <span class="dot"></span> SISTEMA OPERATIVO v2.6
+        </div>
+        <a href="#simulador" class="btn btn-outline"><i class="fa-solid fa-terminal"></i> SIMULADOR</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container hero-content">
+      <div class="tag-crimen">CENTRAL DE INTELIGENCIA CLANDESTINA</div>
+      <h2>MANUAL DE OPERACIONES & COMANDOS</h2>
+      <p class="hero-desc">Documentación oficial de mando para organizaciones delictivas y moderación staff. Registra golpes, misiones semanales, expedientes de investigación, correos encriptados y balances de cuotas.</p>
+      
+      <!-- SEARCH BAR -->
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Buscar comando, parámetro o módulo (Ej: /acto-semanal, pollería, /mail, /stop-misiones)...">
+        <button id="clearSearch" class="btn-clear" title="Limpiar"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- FILTER PILLS -->
+      <div class="filter-pills" id="filterPills">
+        <button class="pill active" data-filter="all"><i class="fa-solid fa-border-all"></i> Todos</button>
+        <button class="pill" data-filter="actos"><i class="fa-solid fa-fire"></i> Actos & Cuotas</button>
+        <button class="pill" data-filter="investigaciones"><i class="fa-solid fa-folder-closed"></i> Investigaciones</button>
+        <button class="pill" data-filter="inteligencia"><i class="fa-solid fa-user-secret"></i> Inteligencia / DNI</button>
+        <button class="pill" data-filter="admin"><i class="fa-solid fa-shield-halved"></i> Administración Staff</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="container main-layout">
+    
+    <!-- STATS COUNTER -->
+    <div class="stats-bar">
+      <div class="stat-card">
+        <div class="stat-num" id="cmdCount">14</div>
+        <div class="stat-label">Comandos Disponibles</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">18</div>
+        <div class="stat-label">Tipos de Robo (Inc. Pollería)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">3 / 3</div>
+        <div class="stat-label">Cuota Semanal Default</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num"><i class="fa-solid fa-lock"></i> AES</div>
+        <div class="stat-label">Darknet Zero-Knowledge</div>
+      </div>
+    </div>
+
+    <!-- MODULE 1: ACTOS DELICTIVOS -->
+    <section class="module-group" data-module="actos">
+      <div class="module-header">
+        <div class="module-title">
+          <i class="fa-solid fa-gun"></i>
+          <h3>MÓDULO 01 • GESTIÓN DE ACTOS Y CUOTA SEMANAL</h3>
+        </div>
+        <span class="module-tag">ORGANIZACIONES</span>
+      </div>
+
+      <div class="commands-grid">
+
+        <!-- COMANDO: /agregar-acto-delictivo -->
+        <article class="cmd-card" data-keywords="agregar acto delictivo crimen resultado ganado perdido evidencia foto texto largo">
+          <div class="cmd-head">
+            <code class="cmd-name">/agregar-acto-delictivo</code>
+            <span class="cmd-badge public">ORGANIZACIONES</span>
+          </div>
+          <p class="cmd-desc">Registra un golpe criminal ordinario en la bitácora con indexación táctica de resultado (🟢 Ganado / 🔴 Perdido), foto de evidencia y partición automática de textos largos.</p>
+          <div class="cmd-params">
+            <span class="param-title"><i class="fa-solid fa-list-check"></i> Parámetros Requeridos:</span>
+            <ul>
+              <li><code>organizacion:</code> Rol de la banda ejecutante.</li>
+              <li><code>resultado:</code> <code>[G] Ganado</code> o <code>[P] Perdido</code>.</li>
+              <li><code>miembros:</code> Participantes presentes.</li>
+              <li><code>descripcion:</code> Detalle operativo del suceso.</li>
+              <li><code>evidencia:</code> Foto directa obligatoria.</li>
+              <li><code>fecha:</code> <em>(Opcional)</em> Formato seguro <code>DD/MM/AA</code>.</li>
+            </ul>
+          </div>
+          <div class="cmd-foot">
+            <button class="btn-copy" data-copy="/agregar-acto-delictivo"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+        </article>
+
+        <!-- COMANDO: /acto-semanal -->
+        <article class="cmd-card featured" data-keywords="acto semanal mision robo 24/7 fleeca joyeria polleria cuota limite">
+          <div class="cmd-head">
+            <div class="cmd-featured-tag"><i class="fa-solid fa-star"></i> NÚCLEO OPERATIVO</div>
+            <code class="cmd-name">/acto-semanal</code>
+            <span class="cmd-badge cuota">MISIÓN SEMANAL</span>
+          </div>
+          <p class="cmd-desc">Registra un atraco selectivo para la meta semanal de la banda. El sistema contabiliza los robos hasta el tope asignado (por defecto 3/3). Si las misiones están pausadas con <code>/stop-misiones</code>, el registro se congela.</p>
+          <div class="cmd-params">
+            <span class="param-title"><i class="fa-solid fa-list-check"></i> 18 Tipos de Robo Integrados:</span>
+            <div class="robos-tags">
+              <span>👤 Civil</span><span>🛒 24/7</span><span>🍾 Licorería</span><span class="highlight">🍗 Pollería</span>
+              <span>🔫 Ammu-Nation</span><span>📱 Digital Den</span><span>💻 Life Invader</span><span>💊 Farmacia</span>
+              <span>💳 Fleeca</span><span>💎 Joyería</span><span>🚇 Metro</span><span>🏛️ Banco Central</span>
+              <span>🧪 Humane</span><span>🎰 Casino</span><span>🛥️ Yate</span><span>⚓ Portaaviones</span>
+              <span>🏦 Paleto</span><span>🏮 Secuestro Oficiales</span>
+            </div>
+          </div>
+          <div class="cmd-foot">
+            <button class="btn-copy" data-copy="/acto-semanal"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+        </article>
+
+        <!-- COMANDO: /bitacora -->
+        <article class="cmd-card" data-keywords="bitacora historial actos lista paginacion enlace original mensaje">
+          <div class="cmd-head">
+            <code class="cmd-name">/bitacora</code>
+            <span class="cmd-badge public">CONSULTA</span>
+          </div>
+          <p class="cmd-desc">Despliega el historial interactivo y paginado de los últimos golpes indexados por la organización, con botón directo de hipervínculo al mensaje original y estado del botín.</p>
+          <div class="cmd-params">
+            <span class="param-title"><i class="fa-solid fa-list-check"></i> Parámetros:</span>
+            <ul>
+              <li><code>organizacion:</code> Rol a consultar.</li>
+            </ul>
+          </div>
+          <div class="cmd-foot">
+            <button class="btn-copy" data-copy="/bitacora"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+        </article>
+
+        <!-- COMANDO: /top-semanal -->
+        <article class="cmd-card" data-keywords="top semanal ranking clasificacion auditoria cuotas">
+          <div class="cmd-head">
+            <code class="cmd-name">/top-semanal</code>
+            <span class="cmd-badge public">RANKING</span>
+          </div>
+          <p class="cmd-desc">Tabla de clasificación semanal en vivo. Muestra el avance de cada organización hacia la meta y su estado operativo (incluso si el ciclo está congelado por la administración).</p>
+          <div class="cmd-foot">
+            <button class="btn-copy" data-copy="/top-semanal"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- MODULE 2: INVESTIGACIONES -->
+    <section class="module-group" data-module="investigaciones">
+      <div class="module-header">
+        <div class="module-title">
+          <i class="fa-solid fa-folder-open"></i>
+          <h3>MÓDULO 02 • INVESTIGACIONES & EXPEDIENTES MULTI-CLIP</h3>
+        </div>
+        <span class="module-tag">INTELIGENCIA BÉLICA</span>
+      </div>
+
+      <div class="commands-grid">
+
+        <article class="cmd-card" data-keywords="crear investigacion expediente carpeta caso multiclip pruebas videos">
+          <div class="cmd-head">
+            <code class="cmd-name">/crear-investigacion</code>
+            <span class="cmd-badge public">EXPEDIENTES</span>
+          </div>
+          <p class="cmd-desc">Abre una carpeta de investigación penal/criminal formal con soporte para 1 imagen obligatoria y hasta 7 enlaces directos a clips de video de pruebas.</p>
+          <div class="cmd-params">
+            <span class="param-title"><i class="fa-solid fa-list-check"></i> Campos:</span>
+            <ul>
+              <li><code>organizacion:</code> Banda que abre el caso.</li>
+              <li><code>sospechoso:</code> Persona o facción investigada.</li>
+              <li><code>foto:</code> Captura de evidencia.</li>
+              <li><code>clip_1 ... clip_7:</code> Enlaces a clips (Opcionales).</li>
+            </ul>
+          </div>
+          <div class="cmd-foot">
+            <button class="btn-copy" data-copy="/crear-investigacion"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+        </article>
+
+        <article class="cmd-card" data-keywords="ver investigacion consulta caso desglose clips">
+          <div class="cmd-head">
+            <code class="cmd-name">/ver-investigacion</code>
+            <span class="cmd-badge public">CONSULTA</span>
+          </div>
+          <p class="cmd-desc">Visualiza cronológicamente la línea de tiempo de un expediente con sus bitácoras de avance y el desglose multi-clip interactivo.</p>
+          <div class="cmd-params">
+            <span class="param-title"><i class="fa-solid fa-list-check"></i> Campos:</span>
+            <ul>
+              <li><code>id_caso:</code> Número de folio asignado.</li>
+            </ul>
+          </div>
+          <div class="cmd-foot">
+            <button class="btn-copy" data-copy="/ver-investigacion"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+        </article>
+
+        <article class="cmd-card" data-keywords="avanzar investigacion bitacora seguimiento pruebas">
+          <div class="cmd-head">
+            <code class="cmd-name">/avanzar-investigacion</code>
+            <span class="cmd-badge public">SEGUIMIENTO</span>
+          </div>
+          <p class="cmd-desc">Anexa una nueva bitácora de seguimiento con nuevas capturas y clips a un expediente previamente abierto.</p>
+          <div class="cmd-foot">
+            <button class="btn-copy" data-copy="/avanzar-investigacion"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+        </article>
+
+        <article class="cmd-card" data-keywords="actualizar investigacion validar invalidar pendiente staff">
+          <div class="cmd-head">
+            <code class="cmd-name">/actualizar-investigacion</code>
+            <span class="cmd-badge staff">STAFF EXCLUSIVO</span>
+          </div>
+          <p class="cmd-desc">Dictamina el veredicto legal del expediente: <code>VALIDADA</code>, <code>INVALIDADA</code> o <code>PENDIENTE</code> con nota oficial del moderador.</p>
+          <div class="cmd-foot">
+            <button class="btn-copy" data-copy="/actualizar-investigacion"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- MODULE 3: INTELIGENCIA & DARKNET -->
+    <section class="module-group" data-module="inteligencia">
+      <div class="module-header">
+        <div class="module-title">
+          <i class="fa-solid fa-envelope-circle-check"></i>
+          <h3>MÓDULO 03 • DARKNET, MENSAJERÍA & CONTROL DNI</h3>
+        </div>
+        <span class="module-tag">RED OSCURA</span>
+      </div>
+
+      <div class="commands-grid">
+
+        <article class="cmd-card featured" data-keywords="mail correo encriptado darknet autodestruccion purga boton anonimo">
+          <div class="cmd-head">
+            <div class="cmd-featured-tag"><i class="fa-solid fa-lock"></i> CRIPTOGRAFÍA P2P</div>
+            <code class="cmd-name">/mail</code>
+            <span class="cmd-badge darknet">ZERO-KNOWLEDGE</span>
+          </div>
+          <p class="cmd-desc">Emite una transmisión anónima y encriptada dirigida a una organización con mención perimetral y un botón físico de <strong>Autodestrucción Inmediata</strong> operable por el emisor o Staff.</p>
+          <div class="cmd-params">
+            <span class="param-title"><i class="fa-solid fa-list-check"></i> Campos:</span>
+            <ul>
+              <li><code>de:</code> Alias o remitente falso encriptado.</li>
+              <li><code>para:</code> Organización destinataria o rol.</li>
+              <li><code>clave_acceso:</code> Firma digital única para descifrado.</li>
+              <li><code>contenido:</code> Mensaje clasificado de la transmisión.</li>
+            </ul>
+          </div>
+          <div class="cmd-foot">
+            <button class="btn-copy" data-copy="/mail"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+        </article>
+
+        <article class="cmd-card" data-keywords="registro dni extraer ciudadano documento id foto">
+          <div class="cmd-head">
+            <code class="cmd-name">/registro-dni</code>
+            <span class="cmd-badge public">INTELIGENCIA</span>
+          </div>
+          <p class="cmd-desc">Archiva digitalmente la extracción física de DNI a una víctima con soporte de fotografía del documento y clips de respaldo.</p>
+          <div class="cmd-foot">
+            <button class="btn-copy" data-copy="/registro-dni"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+        </article>
+
+        <article class="cmd-card" data-keywords="buscar dni rastrear ciudadano base datos staff">
+          <div class="cmd-head">
+            <code class="cmd-name">/buscar-dni</code>
+            <span class="cmd-badge staff">STAFF EXCLUSIVO</span>
+          </div>
+          <p class="cmd-desc">Rastrea la base de datos clandestina para verificar antecedentes y DNIs registrados a nombre de un ciudadano.</p>
+          <div class="cmd-foot">
+            <button class="btn-copy" data-copy="/buscar-dni"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+        </article>
+
+        <article class="cmd-card" data-keywords="eliminar dni purgar borrar expediente staff">
+          <div class="cmd-head">
+            <code class="cmd-name">/eliminar-dni</code>
+            <span class="cmd-badge staff">STAFF EXCLUSIVO</span>
+          </div>
+          <p class="cmd-desc">Elimina y purga de forma permanente la ficha de DNI de una persona en caso de PK, reset o veredicto de apelación.</p>
+          <div class="cmd-foot">
+            <button class="btn-copy" data-copy="/eliminar-dni"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- MODULE 4: ADMINISTRACIÓN STAFF -->
+    <section class="module-group" data-module="admin">
+      <div class="module-header">
+        <div class="module-title">
+          <i class="fa-solid fa-sliders"></i>
+          <h3>MÓDULO 04 • ADMINISTRACIÓN STAFF & GESTIÓN DE CICLO</h3>
+        </div>
+        <span class="module-tag">MODERACIÓN</span>
+      </div>
+
+      <div class="commands-grid">
+
+        <article class="cmd-card featured" data-keywords="stop misiones pausar congelar cerrar ciclo cuota reanudar staff">
+          <div class="cmd-head">
+            <div class="cmd-featured-tag"><i class="fa-solid fa-snowflake"></i> CONTROL DE CICLO</div>
+            <code class="cmd-name">/stop-misiones</code>
+            <span class="cmd-badge staff">STAFF EXCLUSIVO</span>
+          </div>
+          <p class="cmd-desc">Congela de forma inmediata la subida de nuevos actos semanales (<code>/acto-semanal</code>) para balance y auditoría de la semana. <strong>Conserva 100% intactos los contadores y reportes</strong> de cada organización.</p>
+          <div class="cmd-params">
+            <span class="param-title"><i class="fa-solid fa-list-check"></i> Acciones:</span>
+            <ul>
+              <li><code>accion: 🔴 Pausar / Cerrar Misiones</code> (Bloquea registros nuevos).</li>
+              <li><code>accion: 🟢 Reanudar / Abrir Misiones</code> (Reabre el ciclo semanal).</li>
+              <li><code>motivo:</code> Justificación pública mostrada en logs.</li>
+            </ul>
+          </div>
+          <div class="cmd-foot">
+            <button class="btn-copy" data-copy="/stop-misiones"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+        </article>
+
+        <article class="cmd-card" data-keywords="puntos add remove ver set limite reiniciar semana admin">
+          <div class="cmd-head">
+            <code class="cmd-name">/puntos</code>
+            <span class="cmd-badge staff">SISTEMA DE PUNTOS</span>
+          </div>
+          <p class="cmd-desc">Gestor de balance general y cuotas para organizaciones. Controla tanto las cuotas semanales como los puntos de recompensa.</p>
+          <div class="cmd-params">
+            <span class="param-title"><i class="fa-solid fa-list-check"></i> Subcomandos:</span>
+            <ul>
+              <li><code>add / remove:</code> Modifica puntos canjeables de una banda.</li>
+              <li><code>ver:</code> Consulta el balance detallado de una organización.</li>
+              <li><code>set-limite:</code> Ajusta la cuota de misiones semanales (Default: 3).</li>
+              <li><code>reiniciar-semana:</code> Resetea los contadores al abrir un nuevo periodo.</li>
+            </ul>
+          </div>
+          <div class="cmd-foot">
+            <button class="btn-copy" data-copy="/puntos"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+        </article>
+
+        <article class="cmd-card" data-keywords="editar ilegal corregir descripcion minuta miembros staff">
+          <div class="cmd-head">
+            <code class="cmd-name">/editar-ilegal</code>
+            <span class="cmd-badge staff">STAFF EXCLUSIVO</span>
+          </div>
+          <p class="cmd-desc">Edita descripciones, miembros participantes o identificadores de cualquier registro o expediente sin alterar los IDs.</p>
+          <div class="cmd-foot">
+            <button class="btn-copy" data-copy="/editar-ilegal"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+        </article>
+
+        <article class="cmd-card" data-keywords="desmantelar purga total organizacion disolver staff">
+          <div class="cmd-head">
+            <code class="cmd-name">/desmantelar</code>
+            <span class="cmd-badge danger">PURGA TOTAL</span>
+          </div>
+          <p class="cmd-desc">Eliminación en cascada de todo el historial criminal, investigaciones y misiones de una organización disuelta.</p>
+          <div class="cmd-foot">
+            <button class="btn-copy" data-copy="/desmantelar"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SIMULATOR INTERACTIVE SECTION -->
+    <section class="simulator-section" id="simulador">
+      <div class="simulator-card">
+        <div class="sim-header">
+          <i class="fa-solid fa-terminal"></i>
+          <div>
+            <h3>SIMULADOR DE PROTOCOLO • MYSTICOS</h3>
+            <p>Comprueba la lógica de cuotas, el bloqueo de /stop-misiones y la generación de códigos</p>
+          </div>
+        </div>
+
+        <div class="sim-body">
+          <div class="sim-controls">
+            <div class="control-group">
+              <label for="simRobo">Tipo de Atraco:</label>
+              <select id="simRobo">
+                <option value="🍗 Pollería">🍗 Pollería</option>
+                <option value="🛒 24/7">🛒 Supermercado 24/7</option>
+                <option value="💎 Joyería">💎 Joyería Vangelico</option>
+                <option value="💳 Fleeca">💳 Banco Fleeca</option>
+                <option value="🏛️ Banco Central">🏛️ Banco Central</option>
+                <option value="🎰 Casino">🎰 Diamond Casino</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label for="simEstadoCiclo">Estado del Ciclo (/stop-misiones):</label>
+              <select id="simEstadoCiclo">
+                <option value="activo">🟢 Ciclo Abierto (Misiones Activas)</option>
+                <option value="pausado">🔴 Ciclo Pausado (/stop-misiones ON)</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label for="simProgreso">Robos Completados Esta Semana:</label>
+              <div class="range-wrap">
+                <input type="range" id="simProgreso" min="0" max="4" value="2">
+                <span id="progresoVal" class="badge-num">2 / 3</span>
+              </div>
+            </div>
+
+            <button id="btnSimular" class="btn btn-crimson"><i class="fa-solid fa-play"></i> Simular Ejecución /acto-semanal</button>
+          </div>
+
+          <div class="sim-output">
+            <div class="output-header">
+              <span>TERMINAL DISCORD RESPONSE</span>
+              <span class="status-indicator"></span>
+            </div>
+            <pre id="terminalOutput">Esperando simulación táctica...</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <h4>MYSTICOS RP • FIVEFACTIONS ECOSYSTEM</h4>
+        <p>Desarrollado para la coordinación de facciones delictivas, auditoría de cuotas e inteligencia criminal.</p>
+      </div>
+      <div class="footer-right">
+        <span>Diseño de Interfaz Clandestina • 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="toast">
+    <i class="fa-solid fa-check"></i> <span id="toastMsg">Comando copiado</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
