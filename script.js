@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cmdCount.textContent = cmdCards.length;
   }
 
-  // 1. FILTRADO POR TEXTO Y CATEGORÍA
+  // FILTRADO POR TEXTO Y CATEGORÍA
   let currentCategory = 'all';
 
   function applyFilters() {
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.focus();
   });
 
-  // 2. FILTRADO POR BOTONES (PILLS)
+  // FILTRADO POR BOTONES (PILLS)
   filterPills.forEach(pill => {
     pill.addEventListener('click', () => {
       filterPills.forEach(p => p.classList.remove('active'));
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 3. COPIAR COMANDO AL PORTAPAPELES
+  // COPIAR COMANDO AL PORTAPAPELES
   document.querySelectorAll('.btn-copy').forEach(btn => {
     btn.addEventListener('click', async () => {
       const textToCopy = btn.getAttribute('data-copy');
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2500);
   }
 
-  // 4. SIMULADOR INTERACTIVO DE /acto-semanal Y /stop-misiones
+  // SIMULADOR INTERACTIVO DE /acto-semanal Y /stop-misiones
   const simRobo = document.getElementById('simRobo');
   const simEstadoCiclo = document.getElementById('simEstadoCiclo');
   const simProgreso = document.getElementById('simProgreso');
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
       terminalOutput.textContent = 'Procesando interacción Discord /acto-semanal...\n';
 
       setTimeout(() => {
-        // CASO 1: MISIONES CONGELADAS CON /stop-misiones
+        // MISIONES CONGELADAS CON /stop-misiones
         if (estado === 'pausado') {
           terminalOutput.textContent = 
 `❌ INTERACCIÓN RECHAZADA (CÓDIGO: MISIONES_STOPPED)
@@ -150,7 +150,7 @@ El registro de misiones semanales se encuentra temporalmente congelado por la Ad
           return;
         }
 
-        // CASO 2: LÍMITE SEMANAL ALCANZADO
+        // LÍMITE SEMANAL ALCANZADO
         if (completados >= limite) {
           terminalOutput.textContent = 
 `❌ CUOTA ALCANZADA (CÓDIGO: MAX_LIMIT_REACHED)
@@ -162,7 +162,7 @@ Esperen al reinicio de la Administración para volver a registrar.`;
           return;
         }
 
-        // CASO 3: REGISTRO EXITOSO
+        // REGISTRO EXITOSO
         const nuevos = completados + 1;
         const metaCumplida = nuevos >= limite;
         const idRandom = Math.floor(100 + Math.random() * 900);
