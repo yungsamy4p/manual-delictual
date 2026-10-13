@@ -797,45 +797,49 @@ body {
 }
 
 /* ==========================================================
-   AJUSTES RESPONSIVOS PARA CABECERA EN MÓVILES (< 768px)
+   FORZADO RESPONSIVO MÓVIL CABECERA
    ========================================================== */
-   
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    padding: 12px 16px;
+@media (max-width: 820px) {
+  header.main-header .header-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 10px 14px !important;
+    width: 100% !important;
   }
 
-  .brand {
-    text-align: center;
-    justify-content: center;
+  header.main-header .brand {
+    text-align: center !important;
+    justify-content: center !important;
   }
 
-  .header-actions {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
+  header.main-header .header-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
-  /* El badge de versión ocupa ancho proporcional o queda centrado arriba */
-  .badge-status {
-    font-size: 0.75rem;
-    padding: 4px 10px;
+  header.main-header .badge-status {
+    width: auto !important;
+    font-size: 0.72rem !important;
+    padding: 4px 10px !important;
+    margin-bottom: 2px !important;
   }
 
-  /* Los botones se ajustan equitativamente sin cortarse */
-  .header-actions .btn {
-    flex: 1 1 calc(50% - 10px);
-    min-width: 130px;
-    font-size: 0.78rem;
-    padding: 8px 12px;
-    text-align: center;
-    justify-content: center;
-    white-space: nowrap;
+  header.main-header .header-actions .btn {
+    flex: 1 1 calc(50% - 10px) !important;
+    min-width: 130px !important;
+    max-width: 180px !important;
+    font-size: 0.75rem !important;
+    padding: 8px 10px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
   }
 }
